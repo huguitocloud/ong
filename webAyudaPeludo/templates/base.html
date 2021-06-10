@@ -18,8 +18,10 @@
 <body class="fondo">
     <div class="link-home">
         <p>
+        {% block navegacion %}
             <a href="{% url 'INDEX' %}"> HOME> </a> 
             <a href="{% url 'GATOS' %}">GATOS</a>
+        {% endblock navegacion %}
         </p>
     </div>
 
