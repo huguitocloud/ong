@@ -1,29 +1,24 @@
+{% extends "base.html" %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gato Doraemon</title>
-    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
-</head>
+<!-- ESCRIBE TITULO-->
+{% block titulo %} Gato Doraemon {% endblock titulo %}
 
-<body class="fondo">
-    <div class="link-home">
-        <p>
-            <a href="{% url 'INDEX' %}"> HOME> </a> 
-            <a href="{% url 'GATOS' %}">GATOS</a>
-        </p>
-    </div>
-    <table border="1" class="tabla-centro">
-        <tr>
+<!--ESCRIBIR NAVEGACION :) -->
+{% block navegacion %} 
+
+<a href="{% url 'INDEX' %}"> HOME> </a> 
+<a href="{% url 'GATOS' %}">GATOS</a>
+
+{% endblock navegacion %}
+
+<!--FIN ESCRIBIR NAVEGACION -->
+
+<!--CONTENIDO ESTANDAR -->
+{% block contenido %}
             <td><img src="{% static 'img/gato2.jpg' %}" alt="" width="250" height="260"></td>
-            <td>Nombre: Doraemon <br> Edad: 100 años <br> Genero: Desconocido <br> Esterilizado: Desconocido <br> Nro.
-                chip: 666</td>
-        </tr>
-    </table>
-</body>
+            <td>Nombre: Doraemon <br> Edad: 100 años <br> Genero: Desconocido <br> Esterilizado: Desconocido <br> Nro. chip: 666</td>
+{% endblock contenido %}
 
-</html>
+<!--FIN CONTENIDO ESTANDAR-->

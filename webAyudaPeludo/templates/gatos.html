@@ -1,24 +1,22 @@
+{% extends "base.html" %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ayudaPeludo</title>
-    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
-</head>
+<!-- ESCRIBE TITULO-->
+{% block titulo %} ayudaPeludo {% endblock titulo %}
 
-<body class="fondo">
-    <div class="link-home">
-        <a href="{% url 'INDEX' %}">
-            <p><u> HOME> </u></p>
-        </a>
-    </div>
-    <div class="centro">
+<!--ESCRIBIR NAVEGACION :) -->
+{% block navegacion %} 
 
-        <h1> <b>
+<a href="{% url 'INDEX' %}"> HOME </a> 
+
+{% endblock navegacion %}
+
+<!--FIN ESCRIBIR NAVEGACION -->
+
+<!--lectura interesante-->
+{% block lectura %}
+<h1> <b>
                 GATOS EN ADOPCION
             </b> </h1>
 
@@ -27,13 +25,14 @@
             at
             veritatis ullam quaerat ducimus.
         </p>
-
-
         <h3>
             NUESTROS GATOS QUE BUSCAN FAMILIA:
         </h3>
+{% endblock lectura %}
+<!--fin lectura interesante-->
 
-        <table border="1" class="tabla-centro">
+<!--CONTENIDO ESTANDAR -->
+{% block contenido %}
             <tr>
                 <td><img src="{% static 'img/gato2.jpg' %}" alt="" width="200" height="200"> </td>
                 <td><a href="{% url 'DORAEMON' %}">Doraemon</a></td>
@@ -46,10 +45,6 @@
                 <td><img src="{% static 'img/gato4.jpg' %}" alt="" width="200" height="200"></td>
                 <td> <a href="{% url 'GARFIELD' %}"> Garfield </a></td>
             </tr>
+{% endblock contenido %}
 
-        </table>
-
-    </div>
-</body>
-
-</html>
+<!--FIN CONTENIDO ESTANDAR-->

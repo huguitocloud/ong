@@ -19,11 +19,20 @@
     <div class="link-home">
         <p>
         {% block navegacion %}
-            <a href="{% url 'INDEX' %}"> HOME> </a> 
-            <a href="{% url 'GATOS' %}">GATOS</a>
+            
+            
         {% endblock navegacion %}
         </p>
     </div>
+
+    <!--CONTENIDO PARA LEER-->
+    <div class="centro">
+    {% block lectura %}
+    
+    {% endblock lectura %}
+
+    </div>
+    <!--FIN CONTENIDO PARA LEER-->
 
     <table border="1" class="tabla-centro">
         <tr>
